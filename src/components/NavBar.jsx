@@ -34,7 +34,7 @@ const NavBar = () => {
             flexGrow: 1,
           }}
         >
-          Qala
+          Qalaывпыв
         </Typography>
         <Box sx={{ display: "flex", gap: 2 }}>
           <FormControl sx={{ m: 1, minWidth: 80 }}>
