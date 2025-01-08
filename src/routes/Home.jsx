@@ -31,7 +31,7 @@ export default function Home() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <Container sx={{ mt: 2 }}>
+      <Container sx={{ mt: 2, ml: 5 }}>
         <SearchSection />
         <div>
           {mockEvents.map((event) => (

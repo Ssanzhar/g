@@ -48,6 +48,7 @@ const MapWithForm = () => {
     title: "",
     description: "",
     image: null,
+    city: city,
   });
   const [markers, setMarkers] = useState([]);
   const marker = city
@@ -85,6 +86,7 @@ const MapWithForm = () => {
       title: "",
       description: "",
       image: null,
+      city: city,
     });
   };
 
@@ -147,7 +149,7 @@ const MapWithForm = () => {
         <MapContainer
           center={[43.222, 76.851]}
           zoom={13}
-          style={{ height: "91.5vh", width: "202vh" }}
+          style={{ height: "93.6vh", width: "202vh" }}
         >
           <TileLayer
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -158,16 +160,20 @@ const MapWithForm = () => {
           {markers.map((marker, index) => (
             <Marker key={index} position={[marker.lat, marker.lng]}>
               <Popup>
-                <Typography variant="h6">{marker.title}</Typography>
-                <Typography variant="body2">{marker.description}</Typography>
+                <Typography variant="h3">City: {marker.city}</Typography>
+                <Typography variant="h6">Title: {marker.title}</Typography>
+                <Typography variant="body2">
+                  Description: {marker.description}
+                </Typography>
                 {marker.image && (
                   <img
                     src={URL.createObjectURL(marker.image)}
                     alt={marker.title}
-                    style={{ width: "100px", height: "auto", marginTop: "8px" }}
+                    style={{ width: "200px", height: "auto", marginTop: "8px" }}
                   />
                 )}
                 <Box sx={{ mt: 2, display: "flex", alignItems: "center" }}>
+                  <Typography variant="h6">Votes: </Typography>
                   <IconButton
                     aria-label="like"
                     onClick={handleUpvote}
@@ -209,7 +215,7 @@ const MapWithForm = () => {
           }}
         >
           <Typography variant="h6" component="h2" sx={{ mb: 2 }}>
-            Add Marker Details
+            Add Event Details
           </Typography>
           <form onSubmit={handleSubmit}>
             <TextField

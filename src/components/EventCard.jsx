@@ -64,7 +64,7 @@ const EventCard = ({ title, date, description, image, location, eventId }) => {
   };
 
   return (
-    <Card sx={{ display: "flex", mb: 2, maxWidth: 800, position: "relative" }}>
+    <Card sx={{ display: "flex", mb: 2, position: "relative", width: "100vh" }}>
       <CardMedia
         component="img"
         sx={{ width: 140 }}
