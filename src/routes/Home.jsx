@@ -14,6 +14,7 @@ const mockEvents = [
       "Annual medical conference discussing latest developments in diagnostics",
     image: suslik,
     location: "Butina st 19/11 ",
+    city: "Almaty",
   },
   {
     id: 2,
@@ -22,6 +23,7 @@ const mockEvents = [
     description: "Summit focused on innovative approaches in medical imaging",
     image: chess,
     location: "Temirazyeva / Rozybakieva st",
+    city: "Astana",
   },
 ];
 

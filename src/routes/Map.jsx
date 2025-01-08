@@ -245,7 +245,7 @@ const MapWithForm = () => {
               <Button variant="contained" color="primary" type="submit">
                 Save
               </Button>
-              <Button variant="outlined" onClick={() => setFormOpen(false)}>
+              <Button variant="contained" onClick={() => setFormOpen(false)}>
                 Cancel
               </Button>
             </Box>
